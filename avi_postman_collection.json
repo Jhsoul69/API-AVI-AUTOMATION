@@ -1,0 +1,46 @@
+{
+    "info": {
+        "name": "AVI API Automation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://avi-controller.local/login"
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"username\": \"dummy-user\", \"password\": \"dummy-pass\"}"
+                }
+            }
+        },
+        {
+            "name": "Create Tenant",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://avi-controller.local/api/tenant"
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"test-tenant\", \"description\": \"Created via Postman\"}"
+                }
+            }
+        }
+    ]
+}
